@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class TeacherHelper {
 
-	public static final double horaAula = 17.50;
+	public static double horaAula = 17.50;
 	public static void main(String[] args) {
 		int opcao=0, numeroAulas, qtdeAlunos, i;
 		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
@@ -18,6 +18,7 @@ public class TeacherHelper {
 			System.out.println("1 - Calcular salário");
 			System.out.println("2 - Calcular média de notas dos alunos");
 			System.out.println("3 - Exibir a motivação do dia!");
+			System.out.println("4 - Sair do sistema");
 			opcao = leitor.nextInt();
 			
 			switch (opcao) {
@@ -48,30 +49,32 @@ public class TeacherHelper {
 					System.out.println("Digite a nota do " + (i+1) + "º aluno:");
 					notaAluno = leitor.nextDouble();
 					mediaAlunos = mediaAlunos + notaAluno;
+					i++;
 				}
 				mediaAlunos = mediaAlunos / qtdeAlunos;
 				System.out.println("A média de notas dos alunos dessa turma é " + mediaAlunos);
 				
+				
 				break;
 			case 3:
 				
-				switch(gerador.nextInt(7)) {
-				case 1:
+				switch(gerador.nextInt(6)) {
+				case 0:
 					System.out.println("Você é um professor incrível!");
 					break;
-				case 2:
+				case 1:
 					System.out.println("Que o seu dia seja produtivo!");
 					break;
-				case 3:
+				case 2:
 					System.out.println("Que os seus alunos notem a paixão com que você ensina!");
 					break;
-				case 4:
+				case 3:
 					System.out.println("Seu trabalho ajuda a fazer do mundo um lugar melhor!");
 					break;
-				case 5:
+				case 4:
 					System.out.println("Quem ensina com o coração cria um tesouro para a vida toda!");
 					break;
-				case 6:
+				case 5:
 					System.out.println("Obrigado por se colocar à disposição do saber!");
 					break;
 					
