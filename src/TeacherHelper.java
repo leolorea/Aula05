@@ -3,14 +3,15 @@ import java.util.Scanner;
 
 public class TeacherHelper {
 
-	public static double horaAula = 17.50;
+
 	public static void main(String[] args) {
 		int opcao=0, numeroAulas, qtdeAlunos, i;
-		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
+		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos, horaAula;
 		
 		Random gerador = new Random();
 		
 		Scanner leitor = new Scanner(System.in);
+		
 		
 		while(opcao!=4) {
 			System.out.println("FERRAMENTA DE AUXÍLIO AO PROFESSOR!");
@@ -28,6 +29,8 @@ public class TeacherHelper {
 				 * http://www1.sinprosp.org.br/guia_consultas.asp?mat=8*/
 				System.out.println("Para calcular seu salário base precisamos saber quantas aulas semanais o professor tem na instituição");
 				numeroAulas = leitor.nextInt();
+				System.out.println("Por favor, informe o valor da hora/aula desejado");
+				horaAula = leitor.nextDouble();
 				salarioBase = numeroAulas * 4.5 * horaAula;
 				horaAtividade = salarioBase * 0.05;
 				descansoSemanalRemunerado = (salarioBase + horaAtividade) / 6;
@@ -60,7 +63,7 @@ public class TeacherHelper {
 				
 				switch(gerador.nextInt(6)) {
 				case 0:
-					System.out.println("Você é um professor incrível!");
+					System.out.println("Você é um professor incrível!" );
 					break;
 				case 1:
 					System.out.println("Que o seu dia seja produtivo!");
