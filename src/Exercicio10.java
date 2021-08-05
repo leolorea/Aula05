@@ -51,7 +51,11 @@ public class Exercicio10 {
 		
 			
 		}else if (transporte.equalsIgnoreCase("onibus")) {System.out.println("Rodizio não se aplica");}
-		}
+		
+		scanner.close();
+	
+	
+	}
 			
 		
 	
